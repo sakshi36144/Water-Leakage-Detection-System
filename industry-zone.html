@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Leakage Detection System</title>
+    <link rel="stylesheet" href="industry-zone.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">LeakGuard</div>
+        <ul class="nav-links">
+            <li><a href="#monitoring">Monitoring</a></li>
+            <li><a href="#alerts">Alerts</a></li>
+            <li><a href="#team">Team</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero-section">
+        <h1>Smart Water Leakage Detection</h1>
+        <p>Real-time monitoring | Early prevention | Secure alerts</p>
+        <button id="see-status">See Live Status</button>
+    </header>
+
+    <main>
+        <section id="monitoring" class="monitoring-section">
+            <h2>Leakage Monitoring Dashboard</h2>
+            <div class="data-board" id="dataBoard">
+                <!-- Data from backend will be shown here -->
+                <div class="sensor-card">
+                    <h3>Zone 1</h3>
+                    <p>Status: <span class="status" id="zone1-status">Loading...</span></p>
+                </div>
+                <div class="sensor-card">
+                    <h3>Zone 2</h3>
+                    <p>Status: <span class="status" id="zone2-status">Loading...</span></p>
+                </div>
+                <div class="sensor-card">
+                    <h3>Zone 3</h3>
+                    <p>Status: <span class="status" id="zone3-status">Loading...</span></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="alerts" class="alerts-section">
+            <h2>Alert History</h2>
+            <ul id="alertList">
+                <!-- Alerts from backend will be loaded here -->
+            </ul>
+    </main>
+    <footer>
+        <p>© 2025 MidGuard Team - SIH Hackathon</p>
+    </footer>
+
+    <script src="ins"></script>
+</body>
+</html>

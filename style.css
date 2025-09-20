@@ -1,0 +1,161 @@
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #183153 ;
+    color: #f2f2f2;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #183153;
+    padding: 1em 2em;
+}
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #12d6e3;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2em;
+}
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border-radius: 3px;
+    transition: background 0.2s;
+}
+.nav-links li a:hover {
+    background: linear-gradient(90deg, #4f86d4 60%, #12d6e3 100%);
+    color: #111;
+}
+.hero-section {
+    text-align: center;
+    padding: 4em 2em;
+    background: #183153;
+}
+.hero-section h1 {
+    font-size: 2.7em;
+    margin-bottom: 0.3em;
+    color: #12d6e3;
+}
+.hero-section #see-status {
+    margin-top: 2em;
+    padding: 0.7em 2em;
+    background: #12d6e3;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: box-shadow 0.2s;
+}
+.hero-section #see-status:hover {
+    box-shadow: 0 4px 14px #12d6e377;
+}
+.monitoring-section, .alerts-section, .team-section {
+    margin: 3em auto;
+    max-width: 900px;
+    padding: 2em;
+    background: #222;
+    border-radius: 14px;
+    box-shadow: 0 2px 16px #18315333;
+}
+.data-board {
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+/* Section styling */
+.monitoring-section {
+  padding: 40px;
+    background: linear-gradient(90deg, #4f86d4 60%, #12d6e3 100%);
+    color: #f2f2f2;/* Light background */
+  text-align: center;
+}
+
+.monitoring-section h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #222;
+}
+
+/* Dashboard grid */
+.data-board {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px; /* Space between cards */
+  justify-items: center;
+}
+
+/* Rectangular card design */
+.sensor-card {
+  background: #ffffff;
+  border-radius: 12px;               /* Smooth corners */
+  padding: 10px;
+  width: 100%;
+  max-width: 350px;                  /* Max size for each card */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+/* Hover effect */
+.sensor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Headings inside cards */
+.sensor-card h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: #0077ff;
+}
+
+/* Paragraph inside cards */
+.sensor-card p {
+  font-size: 15px;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+/* Button (only for Public Interface card) */
+#public {
+  padding: 12px 28px;
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #0077ff, #00c6ff);
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#public:hover {
+  background: linear-gradient(135deg, #005fcc, #009ecc);
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+
+footer {
+    text-align: center;
+    padding: 1.5em 0;
+    background: #183153;
+    color: #fff;
+    font-size: 1em;
+    margin-top: 3em;
+}
+@media (max-width: 750px) {
+    .nav-links {gap: 0.8em;}
+    .data-board, .team-grid {flex-direction: column;}
+    .monitoring-section, .alerts-section, .team-section {padding: 1em;}
+}
