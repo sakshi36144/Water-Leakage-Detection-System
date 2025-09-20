@@ -1,0 +1,83 @@
+html
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Leakage Detection System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">LeakGuard</div>
+        <ul class="nav-links">
+            <li><a href="#monitoring">Monitoring</a></li>
+            <li><a href="#alerts">Alerts</a></li>
+            <li><a href="#team">Team</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero-section">
+        <h1>Smart Water Leakage Detection</h1>
+        <p>Real-time monitoring | Early prevention | Secure alerts</p>
+        <button id="see-status">See Live Status</button>
+    </header>
+
+    <main>
+        <section id="monitoring" class="monitoring-section">
+            <h2>Leakage Monitoring Dashboard</h2>
+            <div class="data-board" id="dataBoard">
+                <!-- Data from backend will be shown here -->
+                <div class="sensor-card">
+                    <h3>Zone 1</h3>
+                    <p>Status: <span class="status" id="zone1-status">Loading...</span></p>
+                </div>
+                <div class="sensor-card">
+                    <h3>Zone 2</h3>
+                    <p>Status: <span class="status" id="zone2-status">Loading...</span></p>
+                </div>
+                <div class="sensor-card">
+                    <h3>Zone 3</h3>
+                    <p>Status: <span class="status" id="zone3-status">Loading...</span></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="alerts" class="alerts-section">
+            <h2>Alert History</h2>
+            <ul id="alertList">
+                <!-- Alerts from backend will be loaded here -->
+            </ul>
+        </section>
+
+        <section id="team" class="team-section">
+            <h2>Meet Our Team</h2>
+            <div class="team-grid">
+                <!-- Update with your actual team details -->
+                <div class="team-member">
+                    <img src="avatar1.png" alt="Member 1">
+                    <h4>Member 1</h4>
+                    <p>Team Lead</p>
+                </div>
+                <div class="team-member">
+                    <img src="avatar2.png" alt="Member 2">
+                    <h4>Member 2</h4>
+                    <p>Backend & IoT</p>
+                </div>
+                <div class="team-member">
+                    <img src="avatar3.png" alt="Member 3">
+                    <h4>Member 3</h4>
+                    <p>Frontend & UI/UX</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 LeakGuard Team - SIH Hackathon</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

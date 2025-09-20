@@ -1,0 +1,112 @@
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #111;
+    color: #f2f2f2;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #183153;
+    padding: 1em 2em;
+}
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #12d6e3;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2em;
+}
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border-radius: 3px;
+    transition: background 0.2s;
+}
+.nav-links li a:hover {
+    background: #12d6e3;
+    color: #111;
+}
+.hero-section {
+    text-align: center;
+    padding: 4em 2em;
+    background: linear-gradient(90deg, #183153 60%, #12d6e3 100%);
+}
+.hero-section h1 {
+    font-size: 2.7em;
+    margin-bottom: 0.3em;
+    color: #12d6e3;
+}
+.hero-section #see-status {
+    margin-top: 2em;
+    padding: 0.7em 2em;
+    background: #12d6e3;
+    border: none;
+    color: #111;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: box-shadow 0.2s;
+}
+.hero-section #see-status:hover {
+    box-shadow: 0 4px 14px #12d6e377;
+}
+.monitoring-section, .alerts-section, .team-section {
+    margin: 3em auto;
+    max-width: 900px;
+    padding: 2em;
+    background: #222;
+    border-radius: 14px;
+    box-shadow: 0 2px 16px #18315333;
+}
+.data-board {
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.sensor-card {
+    background: #183153;
+    padding: 1.2em 1.5em;
+    border-radius: 10px;
+    min-width: 180px;
+    text-align: center;
+    margin-top: 1.5em;
+}
+.status {
+    font-weight: bold;
+}
+.team-grid {
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.team-member {
+    text-align: center;
+    margin-top: 1em;
+}
+.team-member img {
+    width: 84px;
+    border-radius: 50%;
+    border: 2px solid #12d6e3;
+}
+footer {
+    text-align: center;
+    padding: 1.5em 0;
+    background: #183153;
+    color: #fff;
+    font-size: 1em;
+    margin-top: 3em;
+}
+@media (max-width: 750px) {
+    .nav-links {gap: 0.8em;}
+    .data-board, .team-grid {flex-direction: column;}
+    .monitoring-section, .alerts-section, .team-section {padding: 1em;}
+}
