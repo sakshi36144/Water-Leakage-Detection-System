@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Registration Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7fbff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .form-container {
+      background: white;
+      width: 380px;
+      border-radius: 15px;
+      box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+
+    /* Tabs */
+    .tabs {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .tab {
+      flex: 1;
+      padding: 15px;
+      text-align: center;
+      cursor: pointer;
+      font-weight: bold;
+      border-bottom: 2px solid transparent;
+      border-radius: 10px 10px 0 0;
+      background: #f1f8ff;
+      color: #1a73e8;
+    }
+
+    .tab.active {
+      background: linear-gradient(90deg, #34c9eb, #1a73e8);
+      color: white;
+    }
+
+    /* Form */
+    .form-content {
+      padding: 20px;
+    }
+
+    .form-content h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #1a73e8;
+    }
+
+    label {
+      font-size: 14px;
+      font-weight: bold;
+      color: #1a73e8;
+      display: block;
+      margin: 10px 0 5px;
+    }
+
+    input {
+      width: 90%;
+      padding: 10px;
+
+      border: 1px solid #e2eaf1;
+      border-radius: 8px;
+      background: #f2f9ff;
+      font-size: 14px;
+      outline: none;
+    }
+
+    input:focus {
+      border-color: #1a73e8;
+    }
+
+    .password-wrapper {
+      position: relative;
+    }
+
+    .toggle-password {
+      position: absolute;
+      top: 50%;
+      right: 15%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      color: #1a73e8;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    /* Button */
+    .btn {
+      margin-top: 20px;
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      background: linear-gradient(90deg, #34c9eb, #1a73e8);
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+   
+    <div class="form-content">
+      <h2>Public User Registration</h2>
+      <form>
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" placeholder="Enter your name">
+
+        <label for="phone">Phone Number</label>
+        <input type="text" id="phone" placeholder="10-digit number">
+
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter your email">
+
+        <label for="password">Password <span style="font-weight: normal;">(Min 8 chars, 1 number, 1 special)</span></label>
+        <div class="password-wrapper">
+          <input type="password" id="password" placeholder="Enter password">
+          <span class="toggle-password" onclick="togglePassword()">Show</span>
+        </div>
+
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" id="confirm-password" placeholder="Re-enter password">
+
+       <button type="submit" class="btn" ><a href="home.html">Register</button>
+  </a>
+    </form>
+    </div>
+  </div>
+
+  <script>
+    function togglePassword() {
+      const passwordField = document.getElementById("password");
+      const toggleText = document.querySelector(".toggle-password");
+      if (passwordField.type === "password") {
+        passwordField.type = "text";
+        toggleText.textContent = "Hide";
+      } else {
+        passwordField.type = "password";
+        toggleText.textContent = "Show";
+      }
+    }
+  </script>
+</body>
+</html>
