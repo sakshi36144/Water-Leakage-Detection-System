@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Water Leakage Detection - Team Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="team-complaints.css">
+</head>
+<body>
+  <nav class="topnav">
+    <div class="nav-left">
+      <span class="logo"> LeakGuard </span>
+    </div>
+    <div class="nav-center">
+      <a href="#" id="navTeams" class="active">Teams</a>
+      <a href="#" id="navCreate">Create Team</a>
+      <a href="#" id="navJoin">Join Team</a>
+    </div>
+    <div class="nav-right">
+      <button class="logout-btn">Logout</button>
+    </div>
+  </nav>
+  
+  <main>
+    <section class="teams-section" id="teamsSection">
+      <h2>Your Teams</h2>
+      <div class="teams-list" id="teamsList">
+        <!-- Demo static teams, can become dynamic with backend/API -->
+        <div class="team-card">
+          <div class="team-logo" style="background:#aedcf7;">🏭</div>
+          <div class="team-info">
+            <div class="team-name">TechnoFactory Maintenance</div>
+            <div class="team-domain">Factory</div>
+            <button class="access-btn" onclick="showZonesPanel('TechnoFactory Maintenance')">Access Zone Map</button>
+          </div>
+        </div>
+        <div class="team-card">
+          <div class="team-logo" style="background:#c1f3e1;">🏢</div>
+          <div class="team-info">
+            <div class="team-name">GlobalCorp HQ</div>
+            <div class="team-domain">Corporate Building</div>
+            <button class="access-btn" onclick="showZonesPanel('GlobalCorp HQ')">Access Zone Map</button>
+          </div>
+        </div>
+        <div class="team-card">
+          <div class="team-logo" style="background:#f7eab1;">🏥</div>
+          <div class="team-info">
+            <div class="team-name">CareHealth Hospital</div>
+            <div class="team-domain">Hospital</div>
+            <button class="access-btn" onclick="showZonesPanel('CareHealth Hospital')">Access Zone Map</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="zones-section" id="zonesSection" style="display:none;">
+      <h2 id="zonesTitle">Detection Zones</h2>
+      <button onclick="closeZonesPanel()" class="back-btn">← Back to Teams</button>
+      <div class="zones-grid" id="zonesGrid">
+        <!-- Fake interactive zones for demo -->
+      </div>
+      <div id="status"></div>
+    </section>
+  </main>
+  <div class="modal-bg" id="modalBg" style="display:none;">
+    <div class="modal" id="modal">
+      <div id="modalContent"></div>
+      <button onclick="closeModal()" class="close-modal">Close</button>
+    </div>
+  </div>
+  <script src="team-complaints.js"></script>
+</body>
+</html>

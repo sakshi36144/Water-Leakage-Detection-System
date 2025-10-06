@@ -1,0 +1,279 @@
+:root {
+  --brand: #1b8a3d;
+  --bg: #f4fafd;
+  --card: #fff;
+  --accent:  #1b8a3d;
+  --font: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: var(--bg);
+  min-height: 100vh;
+  margin: 0;
+  font-family: var(--font);
+  color: #1b8a3d;
+}
+
+.topnav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(90deg, #1b8a3d 100%);
+  padding: 14px 30px;
+  box-shadow: 0 4px 16px #1671b513;
+  position: sticky; top: 0; z-index: 10;
+}
+
+.logo {
+  font-size: 1.4rem;
+  color: var(--brand);
+  font-weight: 700;
+  margin-right: 11px;
+  letter-spacing: .5px;
+  user-select: none;
+}
+
+.topnav a {
+  margin: 0 8px;
+  text-decoration: none;
+  color: white;
+  font-size: 1.04rem;
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: 11px;
+  transition: background .16s, color .16s;
+}
+
+.topnav a.active, .topnav a:hover {
+  background: linear-gradient(90deg, #0e6c2a);
+  color: #fff;
+}
+
+.nav-right .logout-btn {
+  background: none;
+  border: 1.2px solid  #1b8a3d;
+  color:  #1b8a3d;
+  border-radius: 31px;
+  padding: 7px 18px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all .14s;
+}
+.nav-right .logout-btn:hover {
+  background: linear-gradient(90deg, #1b8a3d);
+  color: #fff;
+  border: 1.7px solid transparent;
+}
+
+main {
+  max-width: 1000px;
+  margin: 32px auto 0 auto;
+  padding: 0 16px;
+}
+
+h2 {
+  font-weight: 700;
+  color: var(--brand);
+  letter-spacing: .2px;
+  margin: 0 0 23px 0;
+}
+
+.teams-section {
+  display: block;
+}
+
+.teams-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  justify-content: start;
+}
+
+.team-card {
+  background: var(--card);
+  border-radius: 18px;
+  box-shadow: 0 2px 15px #43c7e224;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 23px 22px 19px 23px;
+  min-width: 287px;
+  max-width: 308px;
+  flex:1 1 290px;
+  transition: box-shadow .16s, transform .16s;
+  animation: fadein .5s;
+}
+
+@keyframes fadein {
+  from {opacity:0; transform: translateY(25px);}
+  to   {opacity:1; transform: none;}
+}
+
+.team-logo {
+  width: 64px; height: 64px;
+  border-radius: 15px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size: 2.3rem;
+  font-weight: 800;
+  box-shadow: 0 0px 7px #1671b522;
+  background: #f1fbfe;
+}
+
+.team-info .team-name {
+  font-size:1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  margin-bottom: 7px;
+  color: var(--brand);
+}
+.team-info .team-domain {
+  font-size:.92rem;
+  color: #1b8a3d;
+  opacity:.79;
+  margin-bottom:11px;
+}
+.access-btn {
+  background: linear-gradient(90deg, #1b8a3d);
+  color:#fff;
+  border-radius:24px;
+  border: none;
+  padding: 8px 18px;
+  font-size: .97rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background .15s, transform .13s;
+}
+.access-btn:hover {
+  background: linear-gradient(90deg, #024b18);
+  transform:scale(1.04);
+}
+
+.zones-section {
+  display: block;
+}
+
+.zones-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(230px,1fr));
+  gap: 22px;
+}
+.zone-card {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 27px 20px 21px 20px;
+  box-shadow: 0 2px 10px #43c7e225;
+  position:relative;
+  transition: box-shadow .13s,transform .12s;
+  min-width: 215px;
+  animation: popcard .6s;
+}
+
+@keyframes popcard {
+  from { opacity:0; transform:scale(0.88);}
+  to   { opacity:1; transform:scale(1);}
+}
+.zone-title {
+  font-weight: 700;
+  color: var(--brand);
+  letter-spacing: .2px;
+  font-size: 1.08rem;
+  margin-bottom: 8px;
+}
+.zone-status {
+  display:inline-block;
+  padding: 5px 15px;
+  border-radius:13px;
+  font-weight:600;
+  font-size:.96rem;
+  margin:4px 0 12px 0;
+  color: #fff;
+  background: #b7d6ef;
+}
+.zone-status.leak {
+  background: #fb8484;
+}
+.zone-status.fixed {
+  background: #7adc92;
+}
+.zone-btn {
+  display:block;
+  background:  #1b8a3d;
+  color: #fff;
+  border:none;
+  border-radius:10px;
+  padding:8px 17px;
+  margin-top:7px;
+  font-size:.97rem;
+  font-weight:600;
+  cursor:pointer;
+  transition:background .15s,transform .13s;
+}
+.zone-btn.resolve { background:#39b263; }
+.zone-btn.resolve:hover { background:#1e9451;}
+.zone-btn.leak { background:#e23c4c; }
+.zone-btn.leak:hover { background:#b41e2f;}
+.zone-btn.info { background:#7fd8ff; color:#165a99;}
+.zone-btn.info:hover { background:#1479bd; color:#fff;}
+.back-btn {
+  background:none;
+  border:none;
+  color:#176b99;
+  font-weight:600;
+  margin:13px 0 20px 0;
+  font-size:.98rem;
+  cursor:pointer;
+  letter-spacing:0.2px;
+}
+
+#status {
+  margin:15px 0 0 0;
+  text-align: center;
+  font-weight: 600;
+  color: #176b99;
+  min-height:20px;
+}
+
+/* Modal Styles */
+.modal-bg {
+  background: rgba(20, 70, 140, 0.13);
+  position:fixed;
+  top:0;left:0; width:100vw;height:100vh;
+  display:flex;align-items:center;justify-content:center;
+  z-index:999;
+}
+.modal {
+  background:var(--card);
+  border-radius:19px;
+  padding:35px 32px 26px 32px;
+  box-shadow:0 8px 38px #1671b522;
+  min-width:255px;
+  max-width:330px;
+  text-align:center;
+}
+.close-modal {
+  margin-top:22px;
+  background:linear-gradient(90deg,#43c7e2,#1671b5);
+  color:#fff;
+  border:none;
+  border-radius:19px;
+  padding:7px 29px;
+  font-size:1.05rem;
+  font-weight:600;
+  cursor:pointer;
+}
+/* Responsive */
+@media (max-width:650px) {
+  .main {padding:0 4px;}
+  .team-card, .zone-card { min-width: 170px; }
+  .industry-access-wrapper { padding:17px 5px;}
+  .topnav { padding:12px 7px;}
+}
+
+@media (max-width:430px) {
+  .teams-list, .zones-grid { gap:10px;}
+  .zone-card, .team-card { padding:12px 6px 13px 7px;}
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Water Leakage Detection Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-toggle">
+      <button id="userBtn" class="active">Public User</button>
+      <button id="authorityBtn">Authority</button>
+    </div>
+    <div id="userSection">
+      <h2>Public User Login</h2>
+      <form id="userLoginForm" autocomplete="off">
+        <div class="form-group">
+          <label for="user_name">Name</label>
+          <input type="text" id="user_name" required>
+        </div>
+        <div class="form-group">
+          <label for="user_phone">Phone Number</label>
+          <input type="tel" id="user_phone" pattern="[0-9]{10}" placeholder="10-digit number" required>
+        </div>
+        <div class="form-group">
+          <label for="user_email">Email</label>
+          <input type="email" id="user_email" required>
+        </div>
+        <div class="form-group">
+          <label for="user_password">Password <small>(Min 8 chars, 1 number, 1 special)</small></label>
+          <input type="password" id="user_password" minlength="8" required>
+          <span class="toggle-password" data-target="user_password">Show</span>
+          <div class="error" id="user_passwordError"></div>
+        </div>
+       
+        <button type="submit" class="submit-btn"><a href="complaintPublic.html">Login / Register</a></button>
+  
+      </form>
+    </div>
+    <div id="authoritySection" style="display:none;">
+      <h2>Authority Login</h2>
+      <form id="authorityLoginForm" autocomplete="off">
+        <div class="form-group">
+          <label for="auth_email">Official Email</label>
+          <input type="email" id="auth_email" required>
+        </div>
+        <div class="form-group">
+          <label for="auth_password">Password <small>(Min 8 chars, 1 number, 1 special)</small></label>
+          <input type="password" id="auth_password" minlength="8" required>
+          <span class="toggle-password" data-target="auth_password">Show</span>
+          <div class="error" id="auth_passwordError"></div>
+        </div>
+        <div class="form-group">
+          <label for="auth_role">Select Role</label>
+          <select id="auth_role" required>
+            <option value="" disabled selected>Select Authority Role</option>
+            <option value="worker">Worker</option>
+            <option value="verification">Verification</option>
+            <option value="admin">Admin</option>
+          </select>
+        </div>
+        <button type="submit" class="submit-btn">Login as Authority</button>
+      </form>
+    </div>
+    <div id="status"></div>
+  </div>
+  <script src="login.js"></script>
+</body>
+</html>
